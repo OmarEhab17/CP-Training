@@ -1,7 +1,7 @@
 #include <iostream>
 #include <array>
 using namespace std;
-//Complexity: O(log(min(a,b)))
+//Complexity: O(log(min(a,b))) 
 array<int, 3> euclideanGCD(int a, int b) {
     if (!a) return {b, 0, 1};
     int k = b / a;
