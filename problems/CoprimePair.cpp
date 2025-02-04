@@ -11,21 +11,17 @@ int gcd(int a , int b){
 
 int32_t main() {
     int n;
+    const int upper_bound = 1e6 + 1;
+    int arr[upper_bound] = {0};
     cin >> n;
     vector<int> v(n);
     map<int, int> m;
     for(auto &i : v) cin >> i;
     int ans = n * (n - 1) / 2;
-    for(int i = 0; i < n; i++) {
-        for(int j = 2; j*j < v[i]; j++) {
-            while (v[i] % j == 0)
-            {
-                m[j]++;
-                v[i] /= j;
-            }
-          
-            
-        
+  for(int i = 2; i < upper_bound; i++){
+    if(arr[i]) continue;
+    for(int j = i; j < upper_bound; j += i){
+        arr[j]++;
     }
    
     cout << ans << "\n";
