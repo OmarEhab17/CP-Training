@@ -23,7 +23,12 @@ int32_t main() {
     for(int j = i; j < upper_bound; j += i){
         arr[j]++;
     }
-   
-    cout << ans << "\n";
-    return 0;
+     }
+     for (int i = 2; i < upper_bound;++i){
+        
+        }
+        
+
+         cout << ans << "\n";
+     return 0;
 }
